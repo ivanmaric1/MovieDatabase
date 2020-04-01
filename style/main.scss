@@ -1,0 +1,30 @@
+:root {
+    --color-primary: #951015;
+    --color-secondary: #f1d7a6;
+    --color-border: #e21f2d;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-header {
+    width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 150px 1fr;;
+    border: 2px solid var(--color-border);
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+    letter-spacing: 3px;
+    text-shadow: 3px 4px var(--color-border);
+
+    .logo {
+        width: 150px;
+        justify-self: flex-start;
+    }
+
+    h1 {
+        justify-self: center;
+    }
+}
