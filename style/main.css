@@ -16,10 +16,10 @@ body {
   -ms-grid-columns: 150px 1fr;
       grid-template-columns: 150px 1fr;
   border: 2px solid var(--color-border);
-  font-size: 1.6rem;
-  color: var(--color-secondary);
+  font-size: 1.5rem;
+  color: var(--color-primary);
   letter-spacing: 3px;
-  text-shadow: 3px 4px var(--color-border);
+  background-color: #BFF1F2;
 }
 
 .main-header .logo {
@@ -28,7 +28,90 @@ body {
 }
 
 .main-header h1 {
+  margin: 0;
+  padding: 0;
   -ms-grid-column-align: center;
       justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main {
+  width: 1200px;
+  margin: 20px auto;
+  border: 2px solid var(--color-border);
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #BFF1F2;
+}
+
+.main p {
+  margin-top: 50px;
+  font-size: 1.7rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.main .gumb--upis {
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: 2px solid var(--color-border);
+  color: var(--color-border);
+  background-color: var(--color-secondary);
+  position: relative;
+}
+
+.main .gumb--upis:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  outline: none;
+}
+
+.main .gumb--upis:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  outline: none;
+}
+
+.main .gumb--upis:focus {
+  outline: none;
+}
+
+.main .gumb--upis::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-border);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main .gumb--upis:hover::after {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

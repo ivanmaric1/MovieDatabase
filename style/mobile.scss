@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1250px) {
+    .main-header {
+        width: 900px;
+        margin: 5px auto;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .main {
+        width: 900px;
+
+      p {
+            padding: 1rem;
+            font-size: 1.6rem;
+        }
+    
+        .gumb--upis {
+            font-size: 2rem;
+
+         &:hover::after {
+                transform: scale(2);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main-header {
+        width: 700px;
+        margin: 2px auto;
+        font-size: 1rem;
+        letter-spacing: 1px;
+
+        .logo {
+            width: 100px;
+        }
+    }
+    
+    .main {
+        width: 700px;
+
+      p {
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+    
+        .gumb--upis {
+            font-size: 1.6rem;
+
+         &:hover::after {
+                transform: scale(2);
+            }
+        }
+    }
+}
