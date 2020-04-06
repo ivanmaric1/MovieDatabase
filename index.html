@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">¸
     <link rel="stylesheet" href="style/mobile.css">
+    <script src='program.js' defer></script>
     <title>MovieDatabase</title>
 </head>
 <body>
@@ -15,8 +16,28 @@
     </header>
 
     <main class="main">
-        <p>Trenutno nema filmova u kolekciji. Ukoliko želiš upisati film pritisni gumb!</p>
+        <p class='paragraf'>Trenutno nema filmova u kolekciji. Ukoliko želiš upisati film pritisni gumb!</p>
         <button class="gumb--upis">Upiši film</button>
     </main>
+
+    <section class="forma">
+        <div class="container">
+            <img src="img/moviee.png" alt="snimanje" class='logo'>
+            <p class='center'>Unesite podatke za vaš film!</p>
+            <label for="name">Ime filma
+                <input type="text" class='name'>
+            </label>
+            <label for="url">URL slike filma
+                <input type="text" class='url'>
+            </label>
+            <label for="rating">Moj Rating
+                <input type="text" class='rating'>
+            </label>
+            <section class="gumbi">
+                <button class='gumb--upis'>Spremi</button>
+                <button class='gumb--poništi'>Poništi</button>
+            </section>
+        </div>
+    </section>
 </body>
 </html>

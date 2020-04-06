@@ -2,22 +2,26 @@
     --color-primary: #951015;
     --color-secondary: #f1d7a6;
     --color-border: #e21f2d;
+    --color-background: rgb(189, 204, 183);
+    --color-overlay: #5B7273;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: lighten(#f1d7a6, 15%) 
 }
 
 .main-header {
     width: 1200px;
-    margin: 20px auto;
+    margin: 10px auto;
     display: grid;
     grid-template-columns: 150px 1fr;;
     border: 2px solid var(--color-border);
     font-size: 1.5rem;
     color: var(--color-primary);
     letter-spacing: 3px;
-    background-color: #BFF1F2;
+    background-color: var(--color-background);
 
     .logo {
         width: 150px;
@@ -41,7 +45,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #BFF1F2;
+    background-color: var(--color-background);
 
     p {
         margin-top: 50px;
@@ -94,5 +98,105 @@ body {
             transform: scale(2.5);
             opacity: 0;
         }
+    }
+}
+
+.forma {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: #CCB8C9;
+    opacity: 0.8;
+
+    .container {
+        height: 400px;
+        width: 500px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding: 30px;
+
+        .logo {
+            width: 250px;
+            margin: auto;
+        }
+        
+        label {
+            display: flex;
+            justify-content: space-between;
+            font-family: inherit;
+            display: block;
+        }
+
+        input[type='text'] {
+            width: 100%;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            &:focus {
+                outline: 4px solid #4D454B;
+            }
+        }
+
+        .gumbi {
+            display: flex;
+            justify-content: space-between;
+                
+                .gumb--upis {
+                    width: 240px;
+                    font-size: 1.5rem;
+                    margin-top: 20px;
+                    border: 3px solid green;
+                    transition: background .4s ease-in-out;
+
+                    &:hover {
+                        background: green;
+                    }
+                }
+
+                .gumb--poništi {
+                    width: 240px;
+                    font-size: 1.5rem;
+                    margin-top: 20px;
+                    border: 3px solid red;
+                    transition: background .4s ease-in-out;
+
+                    &:hover {
+                        background: red;
+                    }
+                }
+        }
+    }
+}
+
+.visible {
+    display: block;
+    animation: fade 0.9s ease-out forwards;
+}
+
+.unvisible {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+            transform: translateY(-2000px);
+            opacity: .5;
+    }
+
+    100% {
+            transform: translateY(0px);
+            opacity: 1;
     }
 }
