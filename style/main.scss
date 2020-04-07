@@ -16,13 +16,14 @@ body {
 
 //Header
 .main-header {
-    width: 1200px;
+    width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 150px 1fr;
     border: 2px solid var(--color-border);
     color: var(--color-primary);
-    background-color: var(--color-background);
+    background: linear-gradient(to left, #649173, #dbd5a4); 
+
 
     &__logo {
         width: 150px;
@@ -38,12 +39,12 @@ body {
 
 //Main area
 .main {
-    width: 1200px;
+    width: 1500px;
     box-sizing: border-box;
     margin: 20px auto;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     border: 2px solid var(--color-border);
-    background-color: var(--color-background);
+    background: linear-gradient(to left, #649173, #dbd5a4); 
     height: auto;
 
 
@@ -51,6 +52,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 3rem 0;
         
 
         &__paragraph {
@@ -69,7 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
+
 
     &__title {
         font-size: 2.5rem;
@@ -80,6 +82,55 @@ body {
 
     &__list {
         list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        margin-top: 60px;
+
+        li {
+            display: flex;
+            width: 600px;
+            position: relative;
+             
+            .list__img {
+                width: 250px;
+            }
+
+            .list__description {
+                display: flex;
+                flex-direction: column;
+
+                .list__name {
+                    font-size: 1.7rem;
+                    margin-left: 70px;
+                }
+
+                .list__rating {
+                    font-weight: 700;
+                    font-size: 2.3rem;
+                    margin: 0;
+                    align-self: center;
+                }
+
+                .delete {
+                    width: 150px;
+                    font-size: 1.2rem;
+                    position: absolute;
+                    bottom: 100px;
+                    right: 100px;
+                    border: 1px solid var(--color-border);
+                    background-color: var(--color-secondary);
+                    color: var(--color-primary);
+                    transition: all .4s ease-in-out;
+
+                    &:hover {
+                        background-color: var(--color-primary);
+                        color: white;
+                        border: 1px solid #fff;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -91,7 +142,9 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #CCB8C9;
-    opacity: 0.9;
+    opacity: .95;
+    display: none;
+    animation: fade .7s ease-in-out;
 
     .container {
         width: 600px;
@@ -204,7 +257,7 @@ body {
 @keyframes fade {
     0% {
             transform: translateY(-2000px);
-            opacity: .5;
+            opacity: 0;
     }
 
     100% {
