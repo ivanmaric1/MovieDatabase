@@ -13,7 +13,7 @@ body {
 }
 
 .main-header {
-  width: 1500px;
+  width: 1200px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -40,7 +40,7 @@ body {
 }
 
 .main {
-  width: 1500px;
+  width: 1200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 20px auto;
@@ -66,7 +66,7 @@ body {
 }
 
 .main .noMovie__paragraph {
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1.5;
   color: var(--color-primary);
   letter-spacing: 1px;
@@ -108,12 +108,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 600px;
+  width: 500px;
   position: relative;
 }
 
 .movieDatabase__list li .list__img {
-  width: 250px;
+  width: 200px;
 }
 
 .movieDatabase__list li .list__description {
@@ -134,17 +134,16 @@ body {
 .movieDatabase__list li .list__description .list__rating {
   font-weight: 700;
   font-size: 2.3rem;
-  margin: 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  position: absolute;
+  right: 120px;
+  bottom: 50px;
 }
 
 .movieDatabase__list li .list__description .delete {
-  width: 150px;
+  width: 100px;
   font-size: 1.2rem;
   position: absolute;
-  bottom: 100px;
+  bottom: 10px;
   right: 100px;
   border: 1px solid var(--color-border);
   background-color: var(--color-secondary);
@@ -174,7 +173,7 @@ body {
 
 .overlay .container {
   width: 600px;
-  margin: 100px auto;
+  margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,10 +210,10 @@ body {
 .btn {
   text-transform: uppercase;
   font-family: inherit;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
-  width: 250px;
-  height: 100px;
+  width: 200px;
+  height: 80px;
   border: 2px solid var(--color-border);
   color: var(--color-border);
   background-color: var(--color-secondary);

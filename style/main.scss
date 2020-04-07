@@ -16,7 +16,7 @@ body {
 
 //Header
 .main-header {
-    width: 1500px;
+    width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -39,7 +39,7 @@ body {
 
 //Main area
 .main {
-    width: 1500px;
+    width: 1200px;
     box-sizing: border-box;
     margin: 20px auto;
     padding: 1rem 2rem;
@@ -56,7 +56,7 @@ body {
         
 
         &__paragraph {
-            font-size: 2rem;
+            font-size: 1.7rem;
             line-height: 1.5;
             color: var(--color-primary);
             letter-spacing: 1px;
@@ -89,16 +89,18 @@ body {
 
         li {
             display: flex;
-            width: 600px;
+            width: 500px;
             position: relative;
              
             .list__img {
-                width: 250px;
+                width: 200px;
             }
 
             .list__description {
                 display: flex;
                 flex-direction: column;
+                
+
 
                 .list__name {
                     font-size: 1.7rem;
@@ -108,15 +110,16 @@ body {
                 .list__rating {
                     font-weight: 700;
                     font-size: 2.3rem;
-                    margin: 0;
-                    align-self: center;
+                    position: absolute;
+                    right: 120px;
+                    bottom: 50px;
                 }
 
                 .delete {
-                    width: 150px;
+                    width: 100px;
                     font-size: 1.2rem;
                     position: absolute;
-                    bottom: 100px;
+                    bottom: 10px;
                     right: 100px;
                     border: 1px solid var(--color-border);
                     background-color: var(--color-secondary);
@@ -148,7 +151,7 @@ body {
 
     .container {
         width: 600px;
-        margin: 100px auto;
+        margin: 10px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -182,10 +185,10 @@ body {
 .btn{
     text-transform: uppercase;
     font-family: inherit;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 500;
-    width: 250px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     border: 2px solid var(--color-border);
     color: var(--color-border);
     background-color: var(--color-secondary);
