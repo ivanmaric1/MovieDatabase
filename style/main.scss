@@ -1,3 +1,4 @@
+// Variables
 :root {
     --color-primary: #951015;
     --color-secondary: #f1d7a6;
@@ -6,189 +7,200 @@
     --color-overlay: #5B7273;
 }
 
+// Main style
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: lighten(#f1d7a6, 15%) 
 }
 
+//Header
 .main-header {
     width: 1200px;
-    margin: 10px auto;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 150px 1fr;;
+    grid-template-columns: 150px 1fr;
     border: 2px solid var(--color-border);
-    font-size: 1.5rem;
     color: var(--color-primary);
-    letter-spacing: 3px;
     background-color: var(--color-background);
 
-    .logo {
+    &__logo {
         width: 150px;
         justify-self: flex-start;
     }
 
-    h1 {
-        margin: 0;
-        padding: 0;
+    &__title {
+        font-size: 2.5rem;
         justify-self: center;
         align-self: center;
     }
 }
 
+//Main area
 .main {
     width: 1200px;
+    box-sizing: border-box;
     margin: 20px auto;
+    padding: 3rem 2rem;
     border: 2px solid var(--color-border);
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--color-background);
+    height: auto;
 
-    p {
-        margin-top: 50px;
-        font-size: 1.7rem;
-        color: var(--color-primary);
-        letter-spacing: 1px;
-        font-weight: 500;
-        text-align: center;
-    }
 
-    .gumb--upis {
-        text-transform: uppercase;
-        font-family: inherit;
-        font-size: 2.5rem;
-        font-weight: 500;
-        padding: 1rem 2rem;
-        border: 2px solid var(--color-border);
-        color: var(--color-border);
-        background-color: var(--color-secondary);
-        position: relative;
+    .noMovie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
 
-        &:hover{
-            transform: translateY(-4px);
-            outline: none;
-        }
-
-        &:active {
-            transform: translateY(2px);
-            outline: none;
-        }
-
-        &:focus {
-            outline: none;
-        }
-
-        &::after {
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background-color: var(--color-secondary);
-            border: 2px solid var(--color-border);
-            transition: all .5s;
-        }
-
-        &:hover::after {
-            transform: scale(2.5);
-            opacity: 0;
+        &__paragraph {
+            font-size: 2rem;
+            line-height: 1.5;
+            color: var(--color-primary);
+            letter-spacing: 1px;
+            font-weight: 500;
+            text-align: center;
         }
     }
 }
 
-.forma {
+// Movie database
+.movieDatabase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+
+    &__title {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    &__list {
+        list-style: none;
+    }
+}
+
+// Forma
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
     width: 100%;
     height: 100vh;
-    display: none;
     background-color: #CCB8C9;
-    opacity: 0.8;
+    opacity: 0.9;
 
     .container {
-        height: 400px;
-        width: 500px;
+        width: 600px;
         margin: 100px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         font-family: inherit;
-        font-size: 1.5rem;
-        padding: 30px;
+        font-size: 1.8rem;
 
-        .logo {
+        .img__movie {
             width: 250px;
             margin: auto;
         }
-        
-        label {
-            display: flex;
-            justify-content: space-between;
-            font-family: inherit;
-            display: block;
+
+        p {
+            text-align: center;
         }
 
-        input[type='text'] {
+        input[type='text'], input[type='number'] {
             width: 100%;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.3rem;
+            margin: 1rem 0;
 
             &:focus {
                 outline: 4px solid #4D454B;
             }
-        }
-
-        .gumbi {
-            display: flex;
-            justify-content: space-between;
-                
-                .gumb--upis {
-                    width: 240px;
-                    font-size: 1.5rem;
-                    margin-top: 20px;
-                    border: 3px solid green;
-                    transition: background .4s ease-in-out;
-
-                    &:hover {
-                        background: green;
-                    }
-                }
-
-                .gumb--poništi {
-                    width: 240px;
-                    font-size: 1.5rem;
-                    margin-top: 20px;
-                    border: 3px solid red;
-                    transition: background .4s ease-in-out;
-
-                    &:hover {
-                        background: red;
-                    }
-                }
-        }
+        }   
     }
 }
 
-.visible {
-    display: block;
-    animation: fade 0.9s ease-out forwards;
+
+
+// Gumbi
+.btn{
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 2.4rem;
+    font-weight: 500;
+    width: 250px;
+    height: 100px;
+    border: 2px solid var(--color-border);
+    color: var(--color-border);
+    background-color: var(--color-secondary);
+    position: relative;
+
+    &:hover{
+        transform: translateY(-4px);
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(2px);
+        outline: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: var(--color-secondary);
+        border: 2px solid var(--color-border);
+        transition: all .5s;
+    }
+
+    &:hover::after {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
-.unvisible {
-    display: none;
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    
+         .btn--save {
+            width: 280px;
+            font-size: 2.2rem;
+            margin-top: 20px;
+            border: 3px solid green;
+            transition: background .4s ease-in-out;
+
+            &:hover {
+                background: green;
+            }
+        }
+
+        .btn--cancel {
+            width: 280px;
+            font-size: 2.2rem;
+            margin-top: 20px;
+            border: 3px solid red;
+            transition: background .4s ease-in-out;
+
+            &:hover {
+                background: red;
+            }
+        }
 }
 
-.center {
-    text-align: center;
-}
-
+// Animacije
 @keyframes fade {
     0% {
             transform: translateY(-2000px);

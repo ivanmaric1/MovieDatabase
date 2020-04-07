@@ -5,39 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">¸
-    <link rel="stylesheet" href="style/mobile.css">
     <script src='program.js' defer></script>
     <title>MovieDatabase</title>
 </head>
 <body>
     <header class='main-header'>
-            <img src="img/kamera.jpg" alt="Kamera" class='logo'>
-            <h1>Moja kolekcija filmova</h1>
+            <img src="img/kamera.jpg" alt="Kamera" class='main-header__logo'>
+            <h1 class='main-header__title'>Moja kolekcija filmova</h1>
     </header>
 
     <main class="main">
-        <p class='paragraf'>Trenutno nema filmova u kolekciji. Ukoliko želiš upisati film pritisni gumb!</p>
-        <button class="gumb--upis">Upiši film</button>
+        <section class="noMovie">
+            <p class='noMovie__paragraph'>Trenutno nema filmova u kolekciji. Ukoliko želiš upisati film pritisni gumb!</p>
+            <button class="btn">Upiši film</button>
+        </section>
+
+        <section class="movieDatabase">
+            <p class='movieDatabase__title'>Tvoja baza filmova</p>
+            <button class='btn btn-newEntry'>Upiši film</button>
+            <ul class="movieDatabase__list"></ul>
+         </section>
     </main>
 
-    <section class="forma">
+    <form class="overlay">
         <div class="container">
-            <img src="img/moviee.png" alt="snimanje" class='logo'>
-            <p class='center'>Unesite podatke za vaš film!</p>
+            <img src="img/moviee.png" alt="snimanje" class='img__movie'>
+            <p>Unesite podatke za vaš film!</p>
             <label for="name">Ime filma
                 <input type="text" class='name'>
             </label>
             <label for="url">URL slike filma
                 <input type="text" class='url'>
             </label>
-            <label for="rating">Moj Rating
-                <input type="text" class='rating'>
+            <label for="rating">Rating (1 do 5)
+                <input type="number" step='1' max='5' min='1' class='rating'>
             </label>
-            <section class="gumbi">
-                <button class='gumb--upis'>Spremi</button>
-                <button class='gumb--poništi'>Poništi</button>
+            <section class="buttons">
+                <button class='btn--save'>Spremi</button>
+                <button class='btn--cancel'>Poništi</button>
             </section>
         </div>
-    </section>
+    </form>
+
 </body>
 </html>
